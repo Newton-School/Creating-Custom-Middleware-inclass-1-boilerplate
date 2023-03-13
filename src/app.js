@@ -3,8 +3,11 @@ const app = express();
 
 app.use(express.json());
 
+ 
+//Complete below given Middleware function which check whether number provided in api as params is odd or Even . Example is shown below
 
-//middleWare Function to check whether it is odd or Even
+//Example: 
+// GET Reqest of API  '/?num=18' --> The router should return {"num":"18","isOdd":false}
 
 function CheckisOdd(req, res, next) {
 
@@ -12,8 +15,6 @@ function CheckisOdd(req, res, next) {
 
 }
 
-//sample Route for Test
-// GET Reqest of API  '/?num=18' --> The router should return {"num":"18","isOdd":false}
 
 app.get('/', CheckisOdd, (req, res) => {
     
